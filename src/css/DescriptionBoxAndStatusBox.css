@@ -1,0 +1,62 @@
+.descriptionBox {
+  max-width: 630px;
+  width: 100%;
+  margin-right: 220px;
+}
+
+.descriptionBoxTitle {
+  font-size: 40px;
+  font-weight: 900;
+  padding-bottom: 16px;
+}
+.descriptionBoxDescription {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 2.1;
+}
+.descriptionAndStatusBoxWrapper {
+  padding: 60px 16px 16px 16px;
+  display: flex;
+  justify-content: center;
+}
+.statusBoxWrapper {
+  border: 1px solid gray;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.statusConatiner {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.iconAndLableSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+.statusLabel {
+  margin-left: 16px;
+}
+
+.open {
+  background-color: #c2ebd3;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 5px;
+}
+
+.statusBoxImageWrapper {
+  display: flex;
+}
+.statusBoxImage {
+  border-radius: 35px;
+}
