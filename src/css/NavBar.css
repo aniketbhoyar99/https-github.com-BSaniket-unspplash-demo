@@ -16,20 +16,19 @@
   border-radius: 22px;
 }
 
-/* .topSquareNavSearchBarWrapper {
+.topSquareNavSearchBarWrapper {
   width: 800px;
   margin: 0px 40px 0px 10px;
   border: 1px solid #eee;
   padding: 7px;
   background-color: #eee;
-} */
+}
 
 .topNavSearchBar {
   width: 100%;
   max-width: 900px;
   border-radius: 22px;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -94,6 +93,9 @@
   .topNavSearchBarInput {
     max-width: 655px;
   }
+  .topSquareNavSearchBarWrapper{
+    width: 700px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -103,6 +105,9 @@
   .topNavSearchBarInput {
     max-width: 455px;
   }
+  .topSquareNavSearchBarWrapper{
+     width: 500px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -111,6 +116,9 @@
   }
   .topNavLinkText {
     display: none;
+  }
+  .topSquareNavSearchBarWrapper{
+    width: 400px;
   }
 
   .topNavSearchBarInput {

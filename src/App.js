@@ -2,9 +2,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route } from "react-router-dom";
 import Exlpore from "./pages/Exlpore";
-import LinksRoutepage from "./pages/LinksRoutepage";
+import TopicInformationPage from "./pages/TopicInformationPage";
 import Demo from "./components/Demo";
 import AppLayout from "./AppLayout";
+import Home from "./pages/Home";
 import "./App.css";
 
 function App() {
@@ -12,11 +13,14 @@ function App() {
     <div>
       <AppLayout>
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route exact path="/explore">
             <Exlpore />
           </Route>
-          <Route exact path="/t/:linksRoutepage">
-            <LinksRoutepage />
+          <Route exact path="/t/:topicInformationPage">
+            <TopicInformationPage />
           </Route>
           <Route exact path="/demo">
             <Demo />

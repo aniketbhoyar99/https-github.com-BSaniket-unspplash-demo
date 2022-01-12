@@ -5,6 +5,7 @@ import { Menu } from "react-feather";
 import Searchbar from "./Searchbar";
 import Popover from "./Popover";
 import "../css/NavBar.css";
+
 const NavBarSection = () => {
   return (
     <div>

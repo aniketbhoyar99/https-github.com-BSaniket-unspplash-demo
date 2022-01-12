@@ -13,8 +13,11 @@ export const unsplashApi = createApi({
     getTopic: builder.query({
       query: (params) => `topics/${params}?client_id=${client_id}`,
     }),
+    getTopicsPhotos: builder.query({
+      query: (params) => `topics/${params}/photos?client_id=${client_id}`,
+    }),
   }),
 });
 
-export const { useGetTopicsListQuery, useLazyGetTopicQuery } =
+export const { useGetTopicsListQuery, useLazyGetTopicQuery,useLazyGetTopicsPhotosQuery } =
   unsplashApi;
