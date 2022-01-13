@@ -8,7 +8,7 @@ const Avatar = ({imgUrl}) => {
             <div>
               <img
                 src={
-                  imgUrl.length <= 1
+                  imgUrl.length && imgUrl.length === 1
                     ? img.profile_image.medium
                     : img.profile_image.small
                 }

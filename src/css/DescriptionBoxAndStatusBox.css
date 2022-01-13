@@ -107,4 +107,7 @@
   .statusBoxWrapper {
     max-width: 100%;
   }
+  .statusBoxContainer {
+   border: none;
+  }
 }
