@@ -1,0 +1,67 @@
+.editorialNavItem {
+  margin-right: "10px";
+}
+
+.pipeLine {
+  width: 1px;
+  height: 30px;
+  background-color: gray;
+  margin-left: 16px;
+}
+
+/* --------------------carosoul-------------------*/
+
+/* -----------slider left button start- -----------*/
+.cNNJIt {
+  background-color: transparent !important;
+  color: lightgray !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-size: 20px !important;
+}
+/* -----------slider left button end- -----------*/
+
+/* -----------slider right button start- -----------*/
+.jRFJkP {
+  background-color: transparent !important;
+  color: lightgray !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-size: 20px !important;
+}
+/* -----------slider right button start- -----------*/
+
+.carouselWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px -8px;
+}
+
+/* --------------------carosoul-------------------*/
+.MenuBarLinkText {
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  color: gray;
+  padding: 19px 0px;
+  border-bottom: none;
+}
+
+.MenuBarLinkText:active {
+  color: black;
+  border-bottom: 2px solid black;
+  
+}
+
+.MenuBarLinkText:focus {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.MenuBarLinkText:hover {
+  color: black;
+}
