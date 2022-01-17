@@ -16,3 +16,16 @@
   color: white;
   padding-left: 16px;
 }
+
+.editorialPhotoGalleryWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.editorialPhotoGallery {
+  column-count: 3;
+}
+.editorialImgWrapper{
+margin-bottom: 16px;
+}

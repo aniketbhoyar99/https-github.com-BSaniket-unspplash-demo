@@ -1,0 +1,42 @@
+/* Grid */
+
+.searchCollectionWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.searchCollectionImgWrapper {
+  display: grid;
+  grid-template-columns: 200px minmax(90px, 120px);
+  grid-template-rows: repeat(2, 125px);
+  gap: 12px;
+}
+
+img.index-0 {
+  grid-row-start: 1;
+  grid-row-end: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+img.index-1,
+img.index-2 {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 10px 10px 0px;
+}
+.searchCollectionImgWrapper {
+  margin-bottom: 16px;
+}
+.searchCollectionTitle {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.collectionImgTitle {
+  font-size: 28px;
+  font-weight: 700;
+}

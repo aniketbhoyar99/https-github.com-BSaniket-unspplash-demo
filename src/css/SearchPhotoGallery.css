@@ -1,0 +1,14 @@
+.searchedPhotoGalleryWrapper {
+  column-count: 3;
+}
+
+.searchImgWrapper {
+  margin-bottom: 16px;
+}
+
+.photoAndCollectionWrapper {
+  padding: 16px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}

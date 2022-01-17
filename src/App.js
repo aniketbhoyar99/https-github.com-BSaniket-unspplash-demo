@@ -5,6 +5,8 @@ import Exlpore from "./pages/Exlpore";
 import TopicInformationPage from "./pages/TopicInformationPage";
 import AppLayout from "./AppLayout";
 import Editorial from "./pages/Editorial";
+import SearchPhotos from "./pages/SearchPhotos";
+
 import "./App.css";
 
 function App() {
@@ -20,7 +22,13 @@ function App() {
           </Route>
           <Route exact path="/t/:topicInformationPage">
             <TopicInformationPage />
-          </Route>        
+          </Route>
+          <Route exact path="/s/photos/:searchPhotos">
+            <SearchPhotos type="photos" />
+          </Route>
+          <Route exact path="/s/collections/:searchPhotos">
+            <SearchPhotos type="collections" />
+          </Route>
         </Switch>
       </AppLayout>
     </div>

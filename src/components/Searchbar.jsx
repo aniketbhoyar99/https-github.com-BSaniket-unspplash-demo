@@ -1,7 +1,14 @@
 import React from "react";
 import { Search } from "react-feather";
+import { useHistory } from "react-router-dom";
 
 const Searchbar = ({ placeholder, isRounded }) => {
+  const history = useHistory();
+
+const searchValueHandler=(e)=>{
+   history.push(`/s/photos/${e.target.value}`);
+}
+
   return (
     <div
       className={
@@ -16,6 +23,7 @@ const Searchbar = ({ placeholder, isRounded }) => {
           type="text"
           className="topNavSearchBarInput"
           placeholder={placeholder}
+          onChange={searchValueHandler}
         />
       </div>
     </div>

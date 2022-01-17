@@ -5,13 +5,14 @@ const Avatar = ({imgUrl}) => {
       <div className="statusBoxImageWrapper">
         {imgUrl?.map((img) => {
           return (
-            <div>
+            <div className="avtarImgWrapper">
               <img
                 src={
                   imgUrl.length && imgUrl.length === 1
                     ? img.profile_image.medium
                     : img.profile_image.small
                 }
+                width="100%"
                 alt="statusBoxImage"
                 className="statusBoxImage"
               />

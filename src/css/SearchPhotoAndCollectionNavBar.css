@@ -1,0 +1,56 @@
+*,
+*:focus {
+  outline: none !important;
+}
+.searchAndCollectionNavBar {
+  padding: 0px 16px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.searchAndCollectionNavLink {
+  padding: 16px;
+  text-decoration: none;
+  color: gray;
+  border: none;
+}
+.searchAndCollectionNavLink:focus {
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.searchAndCollectionNavLink:hover {
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+}
+.searchCollectionNavBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid lightgray;
+}
+
+/* ------------------- dropdown css start--------------------------*/
+.DropDownWrapper {
+  display: flex;
+}
+.DropdownToggleBtn {
+  background: transparent !important;
+  color: black;
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.DropdownToggleBtn:hover {
+  color: black;
+  box-shadow: none !important;
+}
+
+.DropdownToggleBtn:focus {
+  color: black !important;
+  box-shadow: none !important;
+}
