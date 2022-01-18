@@ -21,17 +21,18 @@ const TopicInformationPage = () => {
     getTopicsPhotos(topicInformationPage);
   }, [topicInformationPage]);
 
-  return (
-    <div>
-      <div className="descriptionAndStatusBoxWrapper">
-        <DescriptionSection topicData={topicData && topicData} />
-        <StatusBox topicData={topicData && topicData} />
-      </div>
-      <div className="photoGAlleryWapper">
-        <PhotoGallery photos={photos} />
-      </div>
-    </div>
-  );
+ 
+   return (
+     <div>
+       <div className="descriptionAndStatusBoxWrapper">
+         <DescriptionSection topicData={topicData && topicData} />
+         <StatusBox topicData={topicData && topicData} />
+       </div>
+       <div className="photoGAlleryWapper">
+         <PhotoGallery photos={photos} />
+       </div>
+     </div>
+   );
 };
 
 export default TopicInformationPage;

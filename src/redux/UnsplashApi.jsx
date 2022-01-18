@@ -7,6 +7,9 @@ export const unsplashApi = createApi({
     baseUrl: "https://api.unsplash.com/",
   }),
   endpoints: (builder) => ({
+    getPhotosList: builder.query({
+      query: () => `photos/?client_id=${client_id}`,
+    }),
     getTopicsList: builder.query({
       query: () => `topics/?client_id=${client_id}`,
     }),
@@ -16,8 +19,17 @@ export const unsplashApi = createApi({
     getTopicsPhotos: builder.query({
       query: (params) => `topics/${params}/photos?client_id=${client_id}`,
     }),
+
+    getSearchPhotos: builder.query({
+      query: (params) =>
+        `search/photos?client_id=${client_id}&query=${params}}`,
+    }),
+    getCollection: builder.query({
+      query: (params) =>
+        `search/collections?client_id=${client_id}&query=${params}}`,
+    }),
   }),
 });
 
-export const { useGetTopicsListQuery, useLazyGetTopicQuery,useLazyGetTopicsPhotosQuery } =
+export const { useGetTopicsListQuery, useLazyGetTopicQuery,useLazyGetTopicsPhotosQuery,useLazyGetSearchPhotosQuery,useLazyGetCollectionQuery,useGetPhotosListQuery } =
   unsplashApi;
