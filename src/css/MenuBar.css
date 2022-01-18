@@ -54,7 +54,6 @@
 .MenuBarLinkText:active {
   color: black;
   border-bottom: 2px solid black;
-  
 }
 
 .MenuBarLinkText:focus {

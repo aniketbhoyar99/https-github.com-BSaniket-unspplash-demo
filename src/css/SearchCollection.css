@@ -40,3 +40,24 @@ img.index-2 {
   font-size: 28px;
   font-weight: 700;
 }
+
+@media only screen and (max-width: 992px) {
+  .searchCollectionWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .searchCollectionWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .searchCollectionImgWrapper {
+    grid-template-columns: 300px minmax(90px, 120px);
+  }
+}
+
+@media only screen and (max-width: 528px) {
+  .searchCollectionImgWrapper {
+    grid-template-columns: 200px minmax(90px, 120px);
+  }
+}

@@ -1,5 +1,6 @@
 .searchedPhotoGalleryWrapper {
   column-count: 3;
+  width: 100%;
 }
 
 .searchImgWrapper {
@@ -11,4 +12,20 @@
   margin-top: 50px;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .searchedPhotoGalleryWrapper {
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .searchedPhotoGalleryWrapper {
+    column-count: 1;
+  }
+
+  .photoAndCollectionWrapper {
+    justify-content: start;
+  }
 }

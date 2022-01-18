@@ -6,7 +6,7 @@ const EditorialPhotoGallery = ({ photosList }) => {
       {photosList?.map((photoList) => {
         return (
           <div className="editorialImgWrapper">
-            <img src={photoList.urls.small} alt={photoList.alt_description} />
+            <img src={photoList.urls.small} alt={photoList.alt_description} width="100%"/>
           </div>
         );
       })}

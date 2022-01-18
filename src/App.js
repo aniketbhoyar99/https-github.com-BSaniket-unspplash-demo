@@ -6,7 +6,6 @@ import TopicInformationPage from "./pages/TopicInformationPage";
 import AppLayout from "./AppLayout";
 import Editorial from "./pages/Editorial";
 import SearchPhotos from "./pages/SearchPhotos";
-
 import "./App.css";
 
 function App() {
