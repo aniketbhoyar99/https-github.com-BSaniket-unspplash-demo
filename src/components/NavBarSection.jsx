@@ -8,13 +8,13 @@ import "../css/NavBar.css";
 
 const NavBarSection = () => {
   return (
-    <div>
+    <>
       <Navbar>
         <NavbarBrand>
           <svg
             width="32"
             height="32"
-            class="hic6U"
+            className="hic6U"
             viewBox="0 0 32 32"
             version="1.1"
             aria-labelledby="unsplash-home"
@@ -42,7 +42,7 @@ const NavBarSection = () => {
         <Menu id="PopoverLegacy" className="menuIcon" type="button" />
         <Popover PopoverFocusId="PopoverLegacy" />
       </Navbar>
-    </div>
+    </>
   );
 };
 

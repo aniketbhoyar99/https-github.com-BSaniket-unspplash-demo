@@ -1,4 +1,3 @@
-import React from "react";
 
 const SearchedPhotoGallery = ({ searchPhoto }) => {
   return (
@@ -15,6 +14,7 @@ const SearchedPhotoGallery = ({ searchPhoto }) => {
         );
       })}
     </div>
+    
   );
 };
 

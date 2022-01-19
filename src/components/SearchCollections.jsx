@@ -12,7 +12,7 @@ const SearchCollections = ({ searchPhotos }) => {
     <div>
       <h3 className="searchCollectionTitle">{searchPhotos}</h3>
       <div className="searchCollectionWrapper">
-        {collections?.results.map((searchCollection) => {
+        {collections?.results.map((searchCollection, index) => {
           return (
             <div>
               <div className="searchCollectionImgWrapper">
@@ -29,9 +29,12 @@ const SearchCollections = ({ searchPhotos }) => {
                 )}
               </div>
               <p className="collectionImgTitle">{searchCollection.title}</p>
-              <p>{`${searchCollection.total_photos} photos`}</p>
+              <div className="collectionImgContaints">
+                <p className="collectiontotalPhotos">{`${searchCollection.total_photos} photos.`}</p>
+                <p>{`Curated by ${searchCollection.user.first_name}${searchCollection.user.last_name}`}</p>
+              </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>

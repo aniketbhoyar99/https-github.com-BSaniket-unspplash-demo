@@ -7,6 +7,11 @@
   margin-bottom: 16px;
 }
 
+.searchImgWrapper:hover {
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
 .photoAndCollectionWrapper {
   padding: 16px;
   margin-top: 50px;

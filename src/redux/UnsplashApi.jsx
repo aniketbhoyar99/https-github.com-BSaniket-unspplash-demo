@@ -22,14 +22,26 @@ export const unsplashApi = createApi({
 
     getSearchPhotos: builder.query({
       query: (params) =>
-        `search/photos?client_id=${client_id}&query=${params}}`,
+        params.orientation && params.orderBy
+          ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}&order_by=${params.orderBy}`
+          : params.orientation
+          ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}`
+          : params.orderBy
+          ? `search/photos?client_id=${client_id}&query=${params.query}&order_by=${params.orderBy}`
+          : `search/photos?client_id=${client_id}&query=${params.query}`,
     }),
     getCollection: builder.query({
       query: (params) =>
-        `search/collections?client_id=${client_id}&query=${params}}`,
+        `search/collections?client_id=${client_id}&query=${params}`,
     }),
   }),
 });
 
-export const { useGetTopicsListQuery, useLazyGetTopicQuery,useLazyGetTopicsPhotosQuery,useLazyGetSearchPhotosQuery,useLazyGetCollectionQuery,useGetPhotosListQuery } =
-  unsplashApi;
+export const {
+  useGetTopicsListQuery,
+  useLazyGetTopicQuery,
+  useLazyGetTopicsPhotosQuery,
+  useLazyGetSearchPhotosQuery,
+  useLazyGetCollectionQuery,
+  useGetPhotosListQuery,
+} = unsplashApi;

@@ -6,7 +6,9 @@ const Searchbar = ({ placeholder, isRounded }) => {
   const history = useHistory();
 
 const searchValueHandler=(e)=>{
-   history.push(`/s/photos/${e.target.value}`);
+  if(e.key === "Enter"){
+    history.push(`/s/photos/${e.target.value}`);
+  }
 }
 
   return (
@@ -23,7 +25,7 @@ const searchValueHandler=(e)=>{
           type="text"
           className="topNavSearchBarInput"
           placeholder={placeholder}
-          onChange={searchValueHandler}
+          onKeyPress={searchValueHandler}
         />
       </div>
     </div>

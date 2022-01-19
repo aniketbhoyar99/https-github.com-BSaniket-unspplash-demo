@@ -11,10 +11,14 @@
 .heroHeading {
   color: white;
   padding-left: 16px;
+  font-size: 40px;
+  font-weight: 700;
 }
 .heroContains {
   color: white;
   padding-left: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .editorialPhotoGalleryWrapper {
@@ -42,5 +46,9 @@
   .editorialPhotoGallery {
     column-count: 1;
     width: 100%;
+  }
+  .heroBackGroundImg {
+    align-items: flex-start;
+    height: 350px;
   }
 }
