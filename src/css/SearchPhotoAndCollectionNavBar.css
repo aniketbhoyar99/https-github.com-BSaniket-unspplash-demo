@@ -28,6 +28,13 @@
   justify-content: space-between;
   border-bottom: 0.5px solid lightgray;
 }
+.orientationIcon {
+  margin-right: 15px;
+  color: gray;
+}
+.searchCollectionImage{
+  color: gray;
+}
 
 /* ------------------- dropdown css start--------------------------*/
 .DropDownWrapper {
@@ -40,15 +47,24 @@
   outline: none !important;
   box-shadow: none !important;
 }
-
+.SelectedDropdownToggleBtn {
+  background: transparent !important;
+  color: black;
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
 .DropdownToggleBtn:hover {
   color: black;
   box-shadow: none !important;
+  font-weight: 600;
 }
 
 .DropdownToggleBtn:focus {
   color: black !important;
   box-shadow: none !important;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 992px) {

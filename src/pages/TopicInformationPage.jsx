@@ -14,7 +14,7 @@ const TopicInformationPage = () => {
   const params = useParams();
   const { topicInformationPage } = params;
   const [getTopic, { data: topicData }] = useLazyGetTopicQuery();
-  const [getTopicsPhotos, { data: photos }] = useLazyGetTopicsPhotosQuery();
+  const [getTopicsPhotos, { data: photos ,isLoading}] = useLazyGetTopicsPhotosQuery();
 
   useEffect(() => {
     getTopic(topicInformationPage);
@@ -24,12 +24,12 @@ const TopicInformationPage = () => {
  
    return (
      <div>
-       <div className="descriptionAndStatusBoxWrapper">
+        <div className="descriptionAndStatusBoxWrapper">
          <DescriptionSection topicData={topicData && topicData} />
          <StatusBox topicData={topicData && topicData} />
        </div>
        <div className="photoGAlleryWapper">
-         <PhotoGallery photos={photos} />
+        {isLoading?"isLoading..............": <PhotoGallery photos={photos} />}
        </div>
      </div>
    );

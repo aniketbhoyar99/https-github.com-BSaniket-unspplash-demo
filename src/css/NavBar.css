@@ -93,7 +93,7 @@
   .topNavSearchBarInput {
     max-width: 655px;
   }
-  .topSquareNavSearchBarWrapper{
+  .topSquareNavSearchBarWrapper {
     width: 700px;
   }
 }
@@ -105,8 +105,8 @@
   .topNavSearchBarInput {
     max-width: 455px;
   }
-  .topSquareNavSearchBarWrapper{
-     width: 500px;
+  .topSquareNavSearchBarWrapper {
+    width: 500px;
   }
 }
 
@@ -117,8 +117,8 @@
   .topNavLinkText {
     display: none;
   }
-  .topSquareNavSearchBarWrapper{
-    width: 400px;
+  .topSquareNavSearchBarWrapper {
+    display: none;
   }
 
   .topNavSearchBarInput {
@@ -141,5 +141,4 @@
     width: 100%;
     max-width: 200px;
   }
-
 }

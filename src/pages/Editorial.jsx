@@ -5,10 +5,11 @@ import { useGetPhotosListQuery } from "../redux/UnsplashApi";
 import "../css/Editorial.css";
 
 const Editorial = () => {
-  const { data: photosList } = useGetPhotosListQuery();
+  const { data: photosList ,isLoading} = useGetPhotosListQuery();
+
 
   return (
-    <div>
+    <>
       <div className="heroBackGroundImg">
         <div>
           <h3 className="heroHeading">Unsplash</h3>
@@ -22,9 +23,9 @@ const Editorial = () => {
         </div>
       </div>
       <div className="editorialPhotoGalleryWrapper">
-        <EditorialPhotoGallery photosList={photosList && photosList} />
+       {isLoading?"Loading..................":<EditorialPhotoGallery photosList={photosList && photosList} />}
       </div>
-    </div>
+    </>
   );
 };
 
