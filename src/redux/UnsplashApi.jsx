@@ -22,17 +22,15 @@ export const unsplashApi = createApi({
 
     getSearchPhotos: builder.query({
       query: (params) =>
-        params.orientation && params.orderBy
-          ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}&order_by=${params.orderBy}`
-          : params.orientation
-          ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}`
-          : params.orderBy
-          ? `search/photos?client_id=${client_id}&query=${params.query}&order_by=${params.orderBy}`
-          : `search/photos?client_id=${client_id}&query=${params.query}`,
+      params.clear?`search/photos?client_id=${client_id}&query=${params.query}`: params.orientation && params.orderBy ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}&order_by=${params.orderBy}` : params.orientation ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}`: params.orderBy ? `search/photos?client_id=${client_id}&query=${params.query}&order_by=${params.orderBy}`: `search/photos?client_id=${client_id}&query=${params.query}`,
     }),
     getCollection: builder.query({
       query: (params) =>
         `search/collections?client_id=${client_id}&query=${params}`,
+    }),
+    getCollectionsPreview: builder.query({
+      query: (params) =>
+        params.entity ? `collections/${params.userId}/${params.entity}?client_id=${client_id}` : `collections/${params.userId}?client_id=${client_id}`,
     }),
   }),
 });
@@ -44,4 +42,5 @@ export const {
   useLazyGetSearchPhotosQuery,
   useLazyGetCollectionQuery,
   useGetPhotosListQuery,
+  useLazyGetCollectionsPreviewQuery,
 } = unsplashApi;

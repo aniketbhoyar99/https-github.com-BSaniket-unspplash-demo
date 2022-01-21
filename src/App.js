@@ -6,6 +6,7 @@ import TopicInformationPage from "./pages/TopicInformationPage";
 import AppLayout from "./AppLayout";
 import Editorial from "./pages/Editorial";
 import SearchPhotos from "./pages/SearchPhotos";
+import PreviewCollectionPhotos from "./pages/PreviewCollectionPhotos";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/s/collections/:searchPhotos">
             <SearchPhotos type="collections" />
+          </Route>
+          <Route exact path="/collections/:id">
+            <PreviewCollectionPhotos />
           </Route>
         </Switch>
       </AppLayout>

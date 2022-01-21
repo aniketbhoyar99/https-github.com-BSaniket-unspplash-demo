@@ -12,6 +12,7 @@ const SearchNavDropDownList = ({
   DropDownListData,
   setOrientationData,
   className,
+  setClear,
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(!dropdownOpen);
@@ -27,11 +28,26 @@ const SearchNavDropDownList = ({
               <DropdownItem className="dropDownItem">
                 <div
                   className="dropDownItemList"
-                  onClick={() => setOrientationData(listData)}
+                  onClick={() => {
+                    setClear("");
+                    setOrientationData(listData);
+                  }}
                 >
-                  {listData.value === "landscape" ? <CreditCard className="orientationIcon"/> : ""}
-                  {listData.value === "portrait" ? <Smartphone className="orientationIcon"/> : ""}
-                  {listData.value === "squarish" ? <Square className="orientationIcon"/> : ""}
+                  {listData.value === "landscape" ? (
+                    <CreditCard className="orientationIcon" />
+                  ) : (
+                    ""
+                  )}
+                  {listData.value === "portrait" ? (
+                    <Smartphone className="orientationIcon" />
+                  ) : (
+                    ""
+                  )}
+                  {listData.value === "squarish" ? (
+                    <Square className="orientationIcon" />
+                  ) : (
+                    ""
+                  )}
                   {listData.label}
                 </div>
               </DropdownItem>
