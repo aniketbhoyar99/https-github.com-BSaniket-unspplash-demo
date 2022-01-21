@@ -10,6 +10,7 @@ const SearchPhotoAndCollectionNavBar = ({
   setOrderByData,
   orientationData,
   orderByData,
+  setClear,
 }) => {
   const param = useParams();
   const OrientationItem = [
@@ -41,7 +42,24 @@ const SearchPhotoAndCollectionNavBar = ({
           Collections 9.8k
         </NavLink>
       </div>
+
       <div className="DropDownWrapper">
+        {
+          (orderByData || orientationData) && 
+           (orderByData !== "Relevance" || orientationData !== 'Any orientation') ? (
+          <button
+            className="clearBtn"
+            onClick={() => {
+              setClear("clear");
+              setOrientationData("");
+              setOrderByData("");
+            }}
+          >
+            clear
+          </button>
+        ) : (
+          ""
+        )}
         {type === "photos" && (
           <SearchNavDropDownList
             btnName={orientationData ? orientationData : "Any orientation"}
@@ -50,6 +68,7 @@ const SearchPhotoAndCollectionNavBar = ({
                 ? "SelectedDropdownToggleBtn"
                 : "DropdownToggleBtn"
             }
+            setClear={setClear}
             DropDownListData={OrientationItem}
             setOrientationData={setOrientationData}
           />
@@ -61,6 +80,7 @@ const SearchPhotoAndCollectionNavBar = ({
             className={
               orderByData ? "SelectedDropdownToggleBtn" : "DropdownToggleBtn"
             }
+            setClear={setClear}
             DropDownListData={RelevanceItem}
             setOrientationData={setOrderByData}
           />

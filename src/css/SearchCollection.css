@@ -9,7 +9,7 @@
 
 .searchCollectionImgWrapper {
   display: grid;
-  grid-template-columns: 230px minmax(90px, 120px);
+  grid-template-columns: 210px minmax(90px, 120px);
   grid-template-rows: repeat(2, 125px);
   gap: 12px;
 }
@@ -29,7 +29,7 @@
   border-radius: 10px 0px 0px 10px;
 }
 
-.index-1{
+.index-1 {
   height: 100%;
   width: 100%;
   border-radius: 0px 10px 0px 0px;
@@ -51,13 +51,20 @@
   font-size: 28px;
   font-weight: 700;
 }
-.collectionImgContaints{
+.collectionImgContaints {
   display: flex;
 }
 
-.collectiontotalPhotos{
+.collectiontotalPhotos {
   margin-right: 16px;
 }
+.tagText {
+  margin-right: 16px;
+  padding: 5px 10px 5px 10px;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+}
+
 @media only screen and (max-width: 992px) {
   .searchCollectionWrapper {
     grid-template-columns: repeat(2, 1fr);

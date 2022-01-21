@@ -32,11 +32,22 @@
   margin-right: 15px;
   color: gray;
 }
-.searchCollectionImage{
+.searchCollectionImage {
   color: gray;
 }
 
 /* ------------------- dropdown css start--------------------------*/
+.clearBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.clearBtn:hover {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+}
 .DropDownWrapper {
   display: flex;
 }
@@ -47,6 +58,19 @@
   outline: none !important;
   box-shadow: none !important;
 }
+
+.DropdownToggleBtn:hover {
+  color: black;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.DropdownToggleBtn:focus {
+  color: black !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
 .SelectedDropdownToggleBtn {
   background: transparent !important;
   color: black;
@@ -55,13 +79,12 @@
   box-shadow: none !important;
   font-weight: 600;
 }
-.DropdownToggleBtn:hover {
+.SelectedDropdownToggleBtn:hover {
   color: black;
   box-shadow: none !important;
   font-weight: 600;
 }
-
-.DropdownToggleBtn:focus {
+.SelectedDropdownToggleBtn:focus {
   color: black !important;
   box-shadow: none !important;
   font-weight: 600;

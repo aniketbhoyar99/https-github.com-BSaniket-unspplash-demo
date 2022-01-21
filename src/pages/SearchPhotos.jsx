@@ -12,6 +12,7 @@ const SearchPhotos = ({ type }) => {
   const searchParams = useParams();
   const [orientationData, setOrientationData] = useState("");
   const [orderByData, setOrderByData] = useState("");
+  const [clear, setClear ] = useState("");
 
   const { searchPhotos } = searchParams;
   const [getSearchPhotos, { data: searchPhoto, isLoading }] =
@@ -22,8 +23,9 @@ const SearchPhotos = ({ type }) => {
       query: searchPhotos,
       orientation: orientationData.value,
       orderBy: orderByData.value,
+      clear: clear,
     });
-  }, [searchPhotos, orientationData, orderByData]);
+  }, [searchPhotos, orientationData, orderByData, clear]);
 
   return (
     <div>
@@ -33,6 +35,7 @@ const SearchPhotos = ({ type }) => {
         setOrderByData={setOrderByData}
         orientationData={orientationData.label}
         orderByData={orderByData.label}
+        setClear={setClear}
       />
       {isLoading ? (
         "isLoading..........."
