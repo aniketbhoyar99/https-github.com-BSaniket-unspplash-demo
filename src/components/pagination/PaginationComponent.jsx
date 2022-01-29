@@ -6,13 +6,12 @@ const PaginationComponent = ({
   totalPages,
   setCurrentPage,
   currentPage,
-  pageSize,
   upperPageBound,
   lowerPageBound,
   setUpperPageBound,
   setLowerPageBound,
 }) => {
-  console.log(totalPages, "totalPages");
+
   const jumpPageList = 5;
   const noOfPages = [];
   for (let i = 1; i <= totalPages; i++) {
