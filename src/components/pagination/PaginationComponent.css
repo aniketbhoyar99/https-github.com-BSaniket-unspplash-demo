@@ -1,0 +1,8 @@
+.paginationContainer {
+  margin-top: 50px;
+}
+.paginationWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}

@@ -1,0 +1,50 @@
+.searchedPhotoGalleryWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.descriptionWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
+}
+.viewsWrapper {
+  margin-right: 40px;
+}
+.likesAndView {
+  font-size: 16px;
+  font-weight: 700;
+}
+.userProfileWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.profileImg {
+  width: 40px;
+  border-radius: 20px;
+}
+.topicsHeadingText {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+.ProfilePreviewImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 16px;
+}
+@media only screen and (max-width: 767px) {
+ .prevImage {
+  width: 100%;
+}
+}
+
