@@ -60,7 +60,6 @@ const SearchPhotos = ({ type }) => {
             { searchPhoto && <PaginationComponent
                 totalPages={searchPhoto?.total_pages}
                 setCurrentPage={setCurrentPage}
-                pageSize={pageSize}
                 currentPage={currentPage}
                 lowerPageBound={lowerPageBound}
                 upperPageBound={upperPageBound}
@@ -74,7 +73,6 @@ const SearchPhotos = ({ type }) => {
               {searchPhoto && <PaginationComponent
                 totalPages={searchPhoto?.total_pages}
                 setCurrentPage={setCurrentPage}
-                pageSize={pageSize}
                 currentPage={currentPage}
                 lowerPageBound={lowerPageBound}
                 upperPageBound={upperPageBound}

@@ -19,7 +19,10 @@ const Editorial = () => {
         <div>
           <h3 className="heroHeading">Unsplash</h3>
           <p className="heroContains">
-            The internet's source the <NavLink to="/" className="freeImagesLink">freely-useable images.</NavLink>
+            The internet's source the{" "}
+            <NavLink to="/" className="freeImagesLink">
+              freely-useable images.
+            </NavLink>
           </p>
           <p className="heroContains">Power by creators everyWhere.</p>
 
