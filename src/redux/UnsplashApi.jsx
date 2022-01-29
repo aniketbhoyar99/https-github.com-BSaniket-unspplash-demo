@@ -8,39 +8,30 @@ export const unsplashApi = createApi({
   }),
   endpoints: (builder) => ({
     getPhotosList: builder.query({
-      query: () => `photos/?client_id=${client_id}`,
-    }),
-    getTopicsList: builder.query({
-      query: () => `topics/?client_id=${client_id}`,
-    }),
-    getTopic: builder.query({
-      query: (params) => `topics/${params}?client_id=${client_id}`,
-    }),
-    getTopicsPhotos: builder.query({
-      query: (params) => `topics/${params}/photos?client_id=${client_id}`,
+      query: (params) =>
+        params.entity && params.userId && params.subEntity
+          ? `${params.entity}/${params.userId}/${params.subEntity}?client_id=${client_id}`
+          : params.userId && params.entity
+          ? `${params.entity}/${params.userId}?client_id=${client_id}`
+          : params.subEntity && params.searchName && params.entity
+          ? `${params.entity}/${params.subEntity}?client_id=${client_id}&query=${params.searchName}`
+          : `${params.entity}/?client_id=${client_id}`,
     }),
 
     getSearchPhotos: builder.query({
-      query: (params) =>
-      params.clear?`search/photos?client_id=${client_id}&query=${params.query}`: params.orientation && params.orderBy ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}&order_by=${params.orderBy}` : params.orientation ? `search/photos?client_id=${client_id}&query=${params.query}&orientation=${params.orientation}`: params.orderBy ? `search/photos?client_id=${client_id}&query=${params.query}&order_by=${params.orderBy}`: `search/photos?client_id=${client_id}&query=${params.query}`,
-    }),
-    getCollection: builder.query({
-      query: (params) =>
-        `search/collections?client_id=${client_id}&query=${params}`,
-    }),
-    getCollectionsPreview: builder.query({
-      query: (params) =>
-        params.entity ? `collections/${params.userId}/${params.entity}?client_id=${client_id}` : `collections/${params.userId}?client_id=${client_id}`,
+      query: (params) => {
+        var finalUrl = `search/photos?client_id=${client_id}&query=${params.query}&per_page=${params.perPage}&page=${params.page}`;
+        return {
+          url: params.orientation
+            ? `${finalUrl}&orientation=${params.orientation}`
+            : params.orderBy
+            ? `${finalUrl}&order_by=${params.orderBy}`
+            : `${finalUrl}`,
+        };
+      },
     }),
   }),
 });
 
-export const {
-  useGetTopicsListQuery,
-  useLazyGetTopicQuery,
-  useLazyGetTopicsPhotosQuery,
-  useLazyGetSearchPhotosQuery,
-  useLazyGetCollectionQuery,
-  useGetPhotosListQuery,
-  useLazyGetCollectionsPreviewQuery,
-} = unsplashApi;
+export const { useLazyGetSearchPhotosQuery, useLazyGetPhotosListQuery } =
+  unsplashApi;

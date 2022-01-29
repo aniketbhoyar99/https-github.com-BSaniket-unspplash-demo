@@ -1,12 +1,12 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route } from "react-router-dom";
-import Exlpore from "./pages/Exlpore";
-import TopicInformationPage from "./pages/TopicInformationPage";
+import Exlpore from "./pages/explore/Exlpore";
+import TopicInformationPage from "./pages/topicInformationPage/TopicInformationPage";
 import AppLayout from "./AppLayout";
-import Editorial from "./pages/Editorial";
-import SearchPhotos from "./pages/SearchPhotos";
-import PreviewCollectionPhotos from "./pages/PreviewCollectionPhotos";
+import Editorial from "./pages/editorial/Editorial";
+import SearchPhotos from "./pages/searchPhotos/SearchPhotos";
+import PreviewCollectionPhotos from "./pages/previewCollectionPhotos/PreviewCollectionPhotos";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
       <AppLayout>
         <Switch>
           <Route exact path="/">
-            <Editorial />
+            <Editorial/>
           </Route>
           <Route exact path="/explore">
-            <Exlpore />
+            <Exlpore/>
           </Route>
           <Route exact path="/t/:topicInformationPage">
-            <TopicInformationPage />
+            <TopicInformationPage/>
           </Route>
           <Route exact path="/s/photos/:searchPhotos">
             <SearchPhotos type="photos" />

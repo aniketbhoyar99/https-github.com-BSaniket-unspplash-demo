@@ -1,0 +1,102 @@
+.searchAndCollectionNavBar {
+  padding: 0px 16px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.searchAndCollectionNavLink {
+  padding: 16px;
+  text-decoration: none;
+  color: gray;
+  border: none;
+}
+
+.active--link{
+  padding: 16px;
+  color: black ;
+  border-bottom: 2px solid black;
+}
+.searchAndCollectionNavLink:hover {
+  padding: 16px;
+  text-decoration: none;
+  color: black;
+}
+.searchCollectionNavBarWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid lightgray;
+}
+.orientationIcon {
+  margin-right: 15px;
+  color: gray;
+}
+.searchCollectionImage {
+  color: gray;
+}
+
+.clearBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.clearBtn:hover {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 600;
+}
+.dropDownWrapper {
+  display: flex;
+}
+.dropdownToggleBtn {
+  background: transparent !important;
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dropdownToggleBtn:hover {
+  color: black;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.dropdownToggleBtn:focus {
+  color: black !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.selectedDropdownToggleBtn {
+  background: transparent !important;
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+.selectedDropdownToggleBtn:hover {
+  color: black !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+.selectedDropdownToggleBtn:focus {
+  color: black !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .dropDownWrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .searchAndCollectionNavLink{
+    padding: 8px;
+  }
+   .searchAndCollectionNavLink:hover{
+    padding: 8px;
+  }
+}

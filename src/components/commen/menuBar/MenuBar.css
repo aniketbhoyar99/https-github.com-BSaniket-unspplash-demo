@@ -1,0 +1,54 @@
+.editorialNavItem {
+  margin-right: "10px";
+}
+
+.pipeLine {
+  width: 1px;
+  height: 30px;
+  background-color: gray;
+  margin-left: 16px;
+}
+
+.carouselBtn .cNNJIt {
+  background-color: transparent !important;
+  color: lightgray !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-size: 20px !important;
+}
+
+.carouselBtn .jRFJkP {
+  background-color: transparent !important;
+  color: lightgray !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  font-size: 20px !important;
+}
+
+.carouselWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 16px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 5px -8px;
+}
+
+.MenuBarLinkText {
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  color: gray;
+  padding: 19px 0px;
+  border-bottom: none;
+}
+.active--link{
+  border-bottom:2px solid black;
+  color: black;
+}
+
+.MenuBarLinkText:hover {
+  color: black;
+}
+

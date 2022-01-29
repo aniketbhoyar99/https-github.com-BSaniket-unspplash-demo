@@ -1,0 +1,36 @@
+.previewCollectionPhotosWrapper {
+  display: flex;
+  justify-content: center;
+}
+.collectionPreviewWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 16px;
+}
+.collectionProfileWrapper {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 50px;
+}
+.prfileImage {
+  border-radius: 24px;
+  margin-right: 16px;
+  width: 40px;
+}
+.photoLikedText {
+  font-size: 18px;
+  font-weight: 600;
+}
+.collectionUserProfileTitle {
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+ .collectionPreviewWrapper {
+ width: 100%;
+}
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import NavBarSection from "./components/NavBarSection";
-import MenuBar from "./components/MenuBar";
+import NavBarSection from './components/commen/navBarSection/NavBarSection'; 
+import MenuBar from "./components/commen/menuBar/MenuBar";
 import { useLocation } from "react-router-dom";
 
 const AppLayout = ({ children }) => {
@@ -11,7 +11,7 @@ const AppLayout = ({ children }) => {
 
   useEffect(() => {
     if (path === "s") setIsMenuBarVisible(false);
-  }, [location]);
+  }, [location,path]);
 
   return (
     <div>

@@ -1,0 +1,123 @@
+.descriptionBox {
+  max-width: 630px;
+  width: 100%;
+  margin-right: 220px;
+}
+
+.descriptionBoxTitle {
+  font-size: 40px;
+  font-weight: 900;
+  padding-bottom: 16px;
+}
+.descriptionBoxDescription {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 2.1;
+}
+.descriptionAndStatusBoxWrapper {
+  padding: 60px 16px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.statusBoxWrapper {
+  max-width: 420px;
+  width: 100%;
+}
+.statusBoxContainer {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+.statusConatiner {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.iconAndLableSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+.statusLabel {
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.openBadg {
+  background-color: #c2ebd3;
+  border: none;
+  border-radius: 5px;
+  width: 69px;
+  padding: 2px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.statusBoxImageWrapper {
+  display: flex;
+}
+.statusBoxImage {
+  border-radius: 35px;
+  width: 30px;
+}
+.statusBoxMultipleImages {
+  border-radius: 35px;
+  width: 25px;
+}
+.totalPhotosStatus {
+  font-weight: 900;
+  font-size: 20px;
+}
+.statusIcon {
+  color: lightgray;
+}
+.statusSubmitBtn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  color: white;
+  background-color: black;
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 1400px) {
+  .descriptionBox {
+    margin-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .descriptionBox {
+    margin-right: 50px;
+  }
+  .descriptionBoxDescription {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .descriptionAndStatusBoxWrapper {
+    flex-direction: column;
+  }
+  .statusBoxWrapper {
+    max-width: 100%;
+  }
+  .statusBoxContainer {
+    border: none;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .descriptionBoxDescription {
+    font-size: 14px;
+  }
+}
